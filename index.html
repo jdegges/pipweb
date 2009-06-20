@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PIP Web</title>
+
+<style type="text/css">
+#inputform {
+    position: relative;
+    left: 25%;
+    width: 50%;
+    text-align:left
+    border: dashed;
+    border-top: #FF3D0D 3px solid;
+    border-bottom: #FF3D0D 4px solid;
+}
+#displayframe {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    height: 500px;
+}
+</style>
+<script type="text/javascript" src="main.js"></script>
+
+</head>
+
+<body bgcolor="#F5DEB3">
+
+<br /><h1 align="center">PIP Web</h1><br /><br />
+
+<div id="inputform">
+    <form action="" name="inputform" onsubmit="return false">
+    <input type="radio" name="options" value="record" onclick="record(document)" />Record<br />
+    <input type="radio" name="options" value="display" onclick="viewdisplay(document)" />Display<br />
+    <input type="radio" name="options" value="view" onclick="viewhistory(document)" />Archive<br /><br />
+
+    <label id="fpslabel" for="fps">Frame Rate</label>
+    <input id="fps" type="text" name="fps" size="5" style="position:absolute; left:110px;"/>
+    <select id="fps_tunit" name="fps_tunit" style="position:absolute; left:180px;">
+    <option value="minutes">per minute</option>
+    <option value="seconds">per second</option>
+    <option value="hours">per hour</option>
+    </select>
+    <label id="fpshelp" for="fps" style="position:absolute; left:300px; font-size:x-small;">* Rate at which frames are recorded per unit time</label>
+    <br />
+
+    <label id="durationlabel" for="duration">Duration</label>
+    <input id="duration" type="text" name="duration" size="5" style="position:absolute; left:110px;"/>
+    <select id="duration_tunit" name="duration_tunit" style="position:absolute; left:180px;">
+    <option value="hours">Hours</option>
+    <option value="minutes">Minutes</option>
+    <option value="seconds">Seconds</option>
+    </select>
+    <label id="durationhelp" for="duration" style="position:absolute; left:300px; font-size:x-small;">* How long to record for</label>
+    <br />
+
+    <label id="frameslabel" for="frames">Frames</label>
+    <input id="frames" type="text" name="frames" size="5" style="position:absolute; left:110px;" />
+    <label id="frameshelp" for="frames" style="position:absolute; left:300px; font-size:x-small;">* Number of frames to record</label>
+    <br /><br />
+
+    <label id="proclabel" for="proc">Processing</label>
+    <select id="proc" name="proc">
+    <option value="edges">Edge Detection</option>
+    <option value="copy">None</option>
+    </select>
+    <label id="prochelp" for="proc" style="position:absolute; left:300px; font-size:x-small;">* Type of processing to do on images</label>
+    <br /><br />
+
+    <button id="button" onclick="mysubmit()">execute!</button>
+    <button id="stopbutton" onclick="stop_recording(document)" disabled="disabled" >stop recording</button>
+    <button id="refresh" onclick="document.getElementById('myframe').contentWindow.location.reload(true)">refresh</button>
+    </form>
+</div>
+<br /><br />
+<div id="displayframe">
+    <iframe id="myframe" src="" frameborder="0" scrolling="auto" width="100%" height="100%"></iframe>
+</div>
+</body>
+</html>

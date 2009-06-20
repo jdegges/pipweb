@@ -1,0 +1,19 @@
+<ApplicationConfiguration>
+	<BrowseSubFolders>true</BrowseSubFolders>
+	<DateFormat>Y-m-d</DateFormat>
+	<DisplayHiddenFiles>false</DisplayHiddenFiles>
+	<FilesPerPage>60</FilesPerPage>
+	<FitImagesToPage>true</FitImagesToPage>
+	<HideFiles>thumbnailer.php,index.php,.htaccess</HideFiles>
+	<MaxFilesPerPage>60</MaxFilesPerPage>
+	<MaxThumbHeight>100</MaxThumbHeight>
+	<MaxThumbWidth>100</MaxThumbWidth>
+	<PluginHeight>500</PluginHeight>
+	<PluginWidth>500</PluginWidth>
+	<SortBy>Name</SortBy>
+	<SortDirection>asc</SortDirection>
+	<StyleUrl>_default.css</StyleUrl>
+	<ThumbnailerStyleUrl>_thumbnailer.css</ThumbnailerStyleUrl>
+	<UsePageIntroductionInSubFolders>true</UsePageIntroductionInSubFolders>
+	<UseThumbnails>true</UseThumbnails>
+</ApplicationConfiguration>
